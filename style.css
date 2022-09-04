@@ -1,3 +1,42 @@
 body {
-    background-color: bisque;
+    background-color: rgba(178, 239, 230, 0.696);
+}
+
+#bars {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3px;
+    height: 100px;
+    justify-content: center;
+}
+
+.bar {
+    width: 20px;
+    height: 0;
+    border: 2px solid white;
+    background-color: rgb(135, 222, 209);
+   align-self: flex-end;
+}
+
+.moveLeft {
+    animation-name: move;
+    animation-delay: 0.001s;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0% {
+        translate: 0px;
+    }
+    100%{
+        translate: -27px;
+    }
+    /* 99.9% {
+        translate: -20px;
+    }
+    100% {
+        translate: 0px;
+    } */
 }
